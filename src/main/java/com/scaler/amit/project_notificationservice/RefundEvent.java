@@ -9,17 +9,19 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderCompletedEvent {
+public class RefundEvent {
     private String orderId;
     private String customerEmail;
     private String message;
+    private String refundAmount;
 
     @Override
     public String toString() {
-        return "OrderCompletedEvent{" +
+        return "RefundEvent{" +
                 "orderId='" + orderId + '\'' +
                 ", customerEmail='" + customerEmail + '\'' +
                 ", message='" + message + '\'' +
+                ", refundAmount='" + refundAmount + '\'' +
                 '}';
     }
 }
